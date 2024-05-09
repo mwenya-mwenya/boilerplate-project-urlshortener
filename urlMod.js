@@ -1,9 +1,12 @@
 let mongoose = require('mongoose');
 
 let urlSchema = new mongoose.Schema({
-  shorturlID: String, 
+  shorturlID: {
+    type: String,
+    unique: true
+  },
   actualWeb: String,
-  address:String,
+  address: String,
 
 });
 
